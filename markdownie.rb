@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'sinatra'
-require 'sinatra/async'
 require 'pathname'
 require 'rdiscount'
 require 'json'
+require 'haml'
 
 module Markdownie
   class << self
@@ -37,7 +37,6 @@ end
 
 configure do
   set :port => 5678
-  Sinatra.register Sinatra::Async
 end
 
 get '/' do
@@ -51,13 +50,8 @@ get '/css/:css' do
   File.read Markdownie.css_path(params[:css])
 end
 
-aget '/file/:path' do
+get '/file/:path' do
   file  = Markdownie.dir + "/#{params[:path]}"
-  mtime = File.mtime(file)
   @markup = Markdownie.render params[:path]
   body haml(:file) unless params[:raw]
-  timer = EM::PeriodicTimer.new(0.2) do
-    timer.cancel and body(Markdownie.render(params[:path])) if mtime < File.mtime(file)
-    mtime = File.mtime(file)
-  end
 end

@@ -10,4 +10,4 @@ end
 help_and_exit! unless dir = ARGV.shift
 
 Markdownie.watch dir
-set :run
+enable :run
