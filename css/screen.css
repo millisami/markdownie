@@ -26,10 +26,12 @@ pre {
   white-space: pre-wrap; /* CSS 2.1 */
   white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
+  width: 700px;
+  display: block;
 }
 code {
-  font: 12px/18px monaco, monospace;
-  display: block;
+  font: 12px/18px Monaco, 'Courier New', monospace;
+/*  display: block;*/
 }
 /* bicubic resizing for non-native sized IMG:
 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
