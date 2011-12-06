@@ -10,7 +10,7 @@ http://www.1stwebdesigner.com/design/snippets-html5-boilerplate/
 
 html { overflow-y: scroll; }
 html { -webkit-font-smoothing: antialiased; }
-body        { font-size: 1em; background-color: #FFFFFF; font-family: 'GentiumAltRegular', Georgia, Times }
+body { font-size: 1em; background-color: #FFFFFF; background-image: url('subtle_freckles.png'); font-family: 'GentiumAltRegular', Georgia, Times }
 
 /*body        { font: 13px/18px 'GentiumAltRegular', Georgia, Times;
               background-color: #FFFFFF; }
@@ -18,7 +18,7 @@ body        { font-size: 1em; background-color: #FFFFFF; font-family: 'GentiumAl
 
 table { font-size:inherit; font:100%; }
 select, input, textarea { font:99% sans-serif; }
-
+strong { font-weight: bold; font-size: 1.1em;}
 pre {
   padding: 15px;
   background: #efe;
@@ -31,7 +31,6 @@ pre {
 }
 code {
   font: 12px/18px Monaco, 'Courier New', monospace;
-/*  display: block;*/
 }
 /* bicubic resizing for non-native sized IMG:
 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
@@ -39,9 +38,9 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 
 
 h1, h2, h3  { font-family: 'Arial'}
-h1          { font-size: 2.3em }
-h2          { font-size: 2em }
-h3          { font-size: 1.8em }
+h1          { font-size: 2em }
+h2          { font-size: 1.8em }
+h3          { font-size: 1.4em }
 
 ul#watching     { font-size: 1.5em }
 ul#watching li  { list-style-type: square; margin-bottom: 0.2em }
